@@ -1,4 +1,4 @@
-app = "openai-proxy"
+app = "your-openai-proxy"
 primary_region = "mad"
 
 [build]
