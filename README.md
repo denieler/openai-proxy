@@ -1,4 +1,6 @@
-# OpenAI Proxy
+<p align="center">
+  <img src="assets/openai-proxy-logo.svg" alt="OpenAI Proxy logo" width="760" />
+</p>
 
 Lightweight Deno proxy for Codex CLI requests to the OpenAI API.
 
