@@ -1,0 +1,18 @@
+{
+  "tasks": {
+    "dev": "deno run --watch --allow-env --allow-net src/main.ts",
+    "start": "deno run --allow-env --allow-net src/main.ts",
+    "test": "deno test --allow-env"
+  },
+  "fmt": {
+    "semiColons": true,
+    "singleQuote": true
+  },
+  "lint": {
+    "rules": {
+      "tags": [
+        "recommended"
+      ]
+    }
+  }
+}
