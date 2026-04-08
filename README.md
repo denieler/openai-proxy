@@ -1,6 +1,6 @@
 # OpenAI Proxy
 
-![OpenAI Proxy architecture](assets/proxy-architecture.svg)
+![OpenAI Proxy hero illustration](assets/openai-proxy-hero.svg)
 
 Lightweight Deno proxy for Codex CLI requests to the OpenAI API.
 
