@@ -3,4 +3,5 @@
 .env.local
 .env.*.local
 deno.lock
+fly.toml
 coverage/
