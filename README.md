@@ -1,7 +1,5 @@
 # OpenAI Proxy
 
-![OpenAI Proxy hero illustration](assets/openai-proxy-hero.svg)
-
 Lightweight Deno proxy for Codex CLI requests to the OpenAI API.
 
 ## Features
