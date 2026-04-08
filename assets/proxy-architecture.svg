@@ -1,97 +1,112 @@
 <svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">OpenAI Proxy Architecture</title>
-  <desc id="desc">A polished architecture diagram showing Codex CLI obtaining a short-lived token from a Deno proxy and forwarding authenticated OpenAI API requests through the proxy.</desc>
+  <title id="title">Abstract OpenAI Proxy Illustration</title>
+  <desc id="desc">Abstract illustration with flowing request paths, token-like shapes, and a protected gateway motif representing an authenticated proxy between a client and the OpenAI API.</desc>
   <defs>
-    <linearGradient id="bg" x1="84" y1="56" x2="1128" y2="664" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#F7F6F1"/>
-      <stop offset="1" stop-color="#E7F1ED"/>
+    <linearGradient id="bg" x1="108" y1="58" x2="1096" y2="664" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F5EE"/>
+      <stop offset="0.52" stop-color="#EEF4F0"/>
+      <stop offset="1" stop-color="#E4EEF4"/>
     </linearGradient>
-    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#FFFFFF"/>
-      <stop offset="1" stop-color="#F3F8F5"/>
+    <radialGradient id="glowLeft" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(286 290) rotate(25) scale(326 254)">
+      <stop stop-color="#D5ECE2"/>
+      <stop offset="1" stop-color="#D5ECE2" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowRight" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(966 414) rotate(-18) scale(308 246)">
+      <stop stop-color="#D9E7F1"/>
+      <stop offset="1" stop-color="#D9E7F1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="frame" x1="116" y1="124" x2="1082" y2="598" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="white" stop-opacity="0.56"/>
     </linearGradient>
-    <linearGradient id="proxy" x1="488" y1="196" x2="760" y2="540" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0D7A5F"/>
-      <stop offset="1" stop-color="#124E6A"/>
+    <linearGradient id="gateway" x1="470" y1="180" x2="730" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E7A60"/>
+      <stop offset="1" stop-color="#154E68"/>
     </linearGradient>
-    <linearGradient id="chip" x1="0" y1="0" x2="1" y2="1">
-      <stop stop-color="#F8FBFA"/>
-      <stop offset="1" stop-color="#EEF4F1"/>
+    <linearGradient id="flowHot" x1="156" y1="282" x2="1048" y2="282" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7BC5AC"/>
+      <stop offset="0.48" stop-color="#0E7A60"/>
+      <stop offset="1" stop-color="#5EA7C5"/>
+    </linearGradient>
+    <linearGradient id="flowCool" x1="1040" y1="446" x2="154" y2="446" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9AB9D8"/>
+      <stop offset="0.46" stop-color="#5C8FA1"/>
+      <stop offset="1" stop-color="#A7B9AE"/>
     </linearGradient>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#0E3835" flood-opacity="0.12"/>
+      <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#143833" flood-opacity="0.11"/>
     </filter>
-    <marker id="arrow" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
-      <path d="M0 0L12 6L0 12V0Z" fill="#255C55"/>
-    </marker>
-    <marker id="arrowSoft" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" orient="auto-start-reverse">
-      <path d="M0 0L12 6L0 12V0Z" fill="#7A8E85"/>
-    </marker>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#183630" flood-opacity="0.08"/>
+    </filter>
   </defs>
 
   <rect x="24" y="24" width="1152" height="672" rx="36" fill="url(#bg)"/>
-  <circle cx="118" cy="94" r="66" fill="#DBECE4"/>
-  <circle cx="1090" cy="142" r="52" fill="#DDEBE5"/>
-  <circle cx="1058" cy="588" r="90" fill="#D9E7F1"/>
+  <ellipse cx="292" cy="280" rx="268" ry="186" fill="url(#glowLeft)"/>
+  <ellipse cx="950" cy="430" rx="256" ry="188" fill="url(#glowRight)"/>
 
   <g filter="url(#shadow)">
-    <rect x="78" y="58" width="1044" height="114" rx="30" fill="rgba(255,255,255,0.76)"/>
+    <rect x="72" y="72" width="1056" height="576" rx="42" fill="url(#frame)"/>
   </g>
-  <text x="96" y="106" fill="#153B36" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="700">OpenAI Proxy</text>
-  <text x="96" y="144" fill="#4B655F" font-family="Helvetica, Arial, sans-serif" font-size="21">Short-lived auth, strict header rewriting, and OpenAI-compatible /v1 request relay for Codex CLI</text>
+
+  <circle cx="176" cy="174" r="68" fill="#DCEDE5"/>
+  <circle cx="1030" cy="562" r="92" fill="#D8E6F0"/>
+  <circle cx="1044" cy="140" r="46" fill="#E5F1EB"/>
+
+  <g opacity="0.74">
+    <path d="M154 284C256 220 366 206 470 262C552 306 626 308 706 256C816 184 932 198 1048 284" stroke="url(#flowHot)" stroke-width="22" stroke-linecap="round"/>
+    <path d="M154 446C278 512 388 524 484 474C560 436 636 434 720 480C830 540 936 522 1048 446" stroke="url(#flowCool)" stroke-width="18" stroke-linecap="round" stroke-dasharray="2 28"/>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <rect x="210" y="238" width="134" height="92" rx="28" fill="white" fill-opacity="0.68"/>
+    <rect x="238" y="266" width="78" height="36" rx="18" fill="#E7F4EE"/>
+    <circle cx="276" cy="284" r="10" fill="#0E7A60"/>
+    <path d="M257 284H295" stroke="#0E7A60" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <g filter="url(#softShadow)">
+    <rect x="850" y="390" width="144" height="100" rx="30" fill="white" fill-opacity="0.66"/>
+    <path d="M892 434C892 417.431 905.431 404 922 404V404C938.569 404 952 417.431 952 434V446C952 462.569 938.569 476 922 476V476C905.431 476 892 462.569 892 446V434Z" fill="#E8F0F7"/>
+    <circle cx="922" cy="440" r="14" fill="#4B86A7"/>
+    <rect x="914" y="454" width="16" height="10" rx="5" fill="#4B86A7"/>
+  </g>
 
   <g filter="url(#shadow)">
-    <rect x="84" y="228" width="248" height="274" rx="30" fill="url(#panel)"/>
-    <rect x="464" y="194" width="272" height="344" rx="36" fill="url(#proxy)"/>
-    <rect x="868" y="228" width="248" height="274" rx="30" fill="url(#panel)"/>
+    <rect x="472" y="170" width="256" height="380" rx="46" fill="url(#gateway)"/>
   </g>
 
-  <rect x="110" y="256" width="196" height="70" rx="20" fill="#E9F4EE"/>
-  <text x="208" y="300" text-anchor="middle" fill="#184740" font-family="Helvetica, Arial, sans-serif" font-size="29" font-weight="700">Codex CLI</text>
-  <text x="208" y="360" text-anchor="middle" fill="#4D6760" font-family="Helvetica, Arial, sans-serif" font-size="18">Calls custom model endpoint</text>
-  <text x="208" y="390" text-anchor="middle" fill="#4D6760" font-family="Helvetica, Arial, sans-serif" font-size="18">Uses proxy bearer token</text>
-  <text x="208" y="420" text-anchor="middle" fill="#4D6760" font-family="Helvetica, Arial, sans-serif" font-size="18">Receives JSON or SSE stream</text>
-
-  <rect x="518" y="226" width="164" height="44" rx="14" fill="#D7F1E6"/>
-  <text x="600" y="254" text-anchor="middle" fill="#0F4037" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700">Deno Service</text>
-
-  <rect x="504" y="294" width="192" height="90" rx="22" fill="rgba(255,255,255,0.14)"/>
-  <text x="600" y="326" text-anchor="middle" fill="#F4FFFB" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700">POST /auth/token</text>
-  <text x="600" y="356" text-anchor="middle" fill="#D7F4EE" font-family="Helvetica, Arial, sans-serif" font-size="17">Verify HMAC signature</text>
-  <text x="600" y="381" text-anchor="middle" fill="#D7F4EE" font-family="Helvetica, Arial, sans-serif" font-size="17">Check timestamp freshness</text>
-
-  <rect x="504" y="404" width="192" height="104" rx="22" fill="rgba(255,255,255,0.14)"/>
-  <text x="600" y="436" text-anchor="middle" fill="#F4FFFB" font-family="Helvetica, Arial, sans-serif" font-size="23" font-weight="700">ALL /v1/*</text>
-  <text x="600" y="466" text-anchor="middle" fill="#D7F4EE" font-family="Helvetica, Arial, sans-serif" font-size="17">Validate short-lived token</text>
-  <text x="600" y="491" text-anchor="middle" fill="#D7F4EE" font-family="Helvetica, Arial, sans-serif" font-size="17">Strip client Authorization</text>
-  <text x="600" y="516" text-anchor="middle" fill="#D7F4EE" font-family="Helvetica, Arial, sans-serif" font-size="17">Inject OPENAI_API_KEY</text>
-
-  <rect x="894" y="256" width="196" height="70" rx="20" fill="#EAF1F8"/>
-  <text x="992" y="300" text-anchor="middle" fill="#183B4A" font-family="Helvetica, Arial, sans-serif" font-size="29" font-weight="700">OpenAI API</text>
-  <text x="992" y="360" text-anchor="middle" fill="#53676E" font-family="Helvetica, Arial, sans-serif" font-size="18">Receives rewritten auth</text>
-  <text x="992" y="390" text-anchor="middle" fill="#53676E" font-family="Helvetica, Arial, sans-serif" font-size="18">Returns JSON and SSE streams</text>
-  <text x="992" y="420" text-anchor="middle" fill="#53676E" font-family="Helvetica, Arial, sans-serif" font-size="18">Hardcoded upstream hostname</text>
-
-  <path d="M332 336C390 336 418 336 462 336" stroke="#255C55" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow)"/>
-  <path d="M738 336C784 336 812 336 866 336" stroke="#255C55" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow)"/>
-  <path d="M866 430C810 430 784 430 738 430" stroke="#7A8E85" stroke-width="5" stroke-linecap="round" stroke-dasharray="10 12" marker-end="url(#arrowSoft)"/>
-  <path d="M462 430C418 430 390 430 332 430" stroke="#7A8E85" stroke-width="5" stroke-linecap="round" stroke-dasharray="10 12" marker-end="url(#arrowSoft)"/>
-
-  <rect x="354" y="288" width="86" height="30" rx="15" fill="url(#chip)"/>
-  <text x="397" y="308" text-anchor="middle" fill="#3D625C" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700">signed auth</text>
-
-  <rect x="762" y="288" width="114" height="30" rx="15" fill="url(#chip)"/>
-  <text x="819" y="308" text-anchor="middle" fill="#3D625C" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700">OpenAI request</text>
-
-  <rect x="764" y="446" width="108" height="30" rx="15" fill="url(#chip)"/>
-  <text x="818" y="466" text-anchor="middle" fill="#3D625C" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700">stream relay</text>
-
-  <rect x="362" y="446" width="78" height="30" rx="15" fill="url(#chip)"/>
-  <text x="401" y="466" text-anchor="middle" fill="#3D625C" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700">token back</text>
-
-  <g filter="url(#shadow)">
-    <rect x="184" y="566" width="832" height="92" rx="24" fill="rgba(255,255,255,0.68)"/>
+  <g opacity="0.92">
+    <rect x="518" y="220" width="164" height="38" rx="19" fill="white" fill-opacity="0.18"/>
+    <rect x="518" y="278" width="164" height="94" rx="28" fill="white" fill-opacity="0.12"/>
+    <rect x="518" y="392" width="164" height="108" rx="28" fill="white" fill-opacity="0.12"/>
   </g>
-  <text x="600" y="605" text-anchor="middle" fill="#284B46" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="700">Security Baseline</text>
-  <text x="600" y="636" text-anchor="middle" fill="#58716A" font-family="Helvetica, Arial, sans-serif" font-size="18">Short TTL tokens  •  Rate limiting  •  Request size limits  •  Secret rotation  •  Docker and Fly.io deployment</text>
+
+  <g>
+    <path d="M564 288H636" stroke="#F2FFFB" stroke-width="10" stroke-linecap="round"/>
+    <path d="M548 322H652" stroke="#D9F4EE" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="600" cy="348" r="18" fill="#D9F4EE"/>
+    <path d="M592 348H608" stroke="#0E7A60" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <path d="M552 426C552 399.49 573.49 378 600 378V378C626.51 378 648 399.49 648 426V434C648 460.51 626.51 482 600 482V482C573.49 482 552 460.51 552 434V426Z" fill="#E2F8F0"/>
+    <path d="M568 422L592 446L634 404" stroke="#0E7A60" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g opacity="0.55">
+    <circle cx="424" cy="218" r="10" fill="#7DB8AA"/>
+    <circle cx="766" cy="262" r="12" fill="#79A8C0"/>
+    <circle cx="384" cy="518" r="8" fill="#A4BBB1"/>
+    <circle cx="804" cy="548" r="10" fill="#8AA5BD"/>
+    <circle cx="214" cy="490" r="12" fill="#C8DDD4"/>
+    <circle cx="962" cy="252" r="10" fill="#C4D9E6"/>
+  </g>
+
+  <g opacity="0.7">
+    <path d="M316 210L344 196" stroke="#6C8A82" stroke-width="4" stroke-linecap="round"/>
+    <path d="M860 520L890 534" stroke="#6E8794" stroke-width="4" stroke-linecap="round"/>
+    <path d="M822 212L850 192" stroke="#739CA4" stroke-width="4" stroke-linecap="round"/>
+    <path d="M350 526L378 546" stroke="#7F9A90" stroke-width="4" stroke-linecap="round"/>
+  </g>
 </svg>
