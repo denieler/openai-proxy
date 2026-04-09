@@ -94,8 +94,10 @@ docker run --rm -p 8080:8080 --env-file .env openai-proxy
 
 ## Fly.io
 
-The repo includes `fly.toml`. Update the `app` value before deployment, then set Fly secrets for:
+The repo includes `fly.toml` plus `fly.toml.template` for reuse. Update the `app` value before deployment, then set Fly secrets for:
 
 - `OPENAI_API_KEY`
 - `PROXY_HMAC_SECRET`
 - `PROXY_TOKEN_SECRET`
+
+Both Fly configs are set to keep the Machine running continuously by setting `auto_stop_machines = "off"`.
